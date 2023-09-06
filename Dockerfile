@@ -2,6 +2,8 @@ FROM maven:3.9.3-amazoncorretto-17 AS build
 
 COPY . .
 
+RUN ls -la
+
 RUN mvn clean package
 
 FROM amazoncorretto:17.0.8
